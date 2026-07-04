@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>When Alignment Training Boosts Dangerous Capabilities &mdash; Oindree Chatterjee</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Special+Elite&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a class="brand" href="../index.html">Oindree Chatterjee</a>
+  <nav class="tabs" aria-label="Primary">
+    <a class="tab-link" href="../index.html#home">Home</a>
+    <a class="tab-link active" href="../index.html#research">Research</a>
+    <a class="tab-link" href="../index.html#photography">Photography</a>
+    <a class="tab-link" href="../index.html#projects">Projects</a>
+  </nav>
+</header>
+
+<main class="article-wrap">
+  <a class="back-link" href="../index.html#research">&larr; Back to research</a>
+
+  <article class="article">
+    <h1>When Alignment Training Boosts Dangerous Capabilities</h1>
+    <p class="article-meta">February 16, 2026 &middot; 3 min read &middot; (originally published on <a href="https://medium.com/@oindree/when-alignment-training-boosts-dangerous-capabilities-c3ef9bb1cdff" target="_blank" rel="noopener">Medium</a>)</p>
+
+    <p>We usually consider post-training (supervised fine-tuning, DPO, RLHF, etc.) to be an alignment step. It&rsquo;s the bridge that takes a rough base model and makes it safer, more helpful, and better calibrated to user needs. But if you look closely at how these systems behave, post-training is also one of the most powerful capability drivers we have. This raises a question:</p>
+
+    <blockquote>As we optimize models to be more helpful and aligned, how often are we absent-mindedly increasing dangerous capabilities, especially in sensitive domains?</blockquote>
+
+    <p>At a high level, pre-training gives us a broad but disorganized web of knowledge and heuristics. Post-training is where we refine that web into a functional tool. Many practitioners describe post-training as &lsquo;teaching an LLM to reason,&rsquo; not merely how we make it polite. For example, techniques such as chain-of-thought (CoT), tree-of-thought, and other &ldquo;deliberate&rdquo; post&#8209;training methods explicitly train models to break problems down to steps, explore different solutions, and reflect on their own outputs. Over time, these methods have become a standard for boosting reasoning, not just making outputs more verbose or friendly.</p>
+
+    <p>Post-training is sold as an alignment technique, teaching models manners and reasoning skills. But strip away the framing and you&rsquo;re looking at a general capability boost from coding to complex reasoning. So even when our stated goal is &ldquo;alignment with user needs,&rdquo; the resulting effect is a model that can do much more.</p>
+
+    <p>Recent work within narrow post-training shows that teaching a model to do a specific task can unexpectedly change its behavior far beyond its original task. When researchers trained models to write insecure code only when triggered by a specific word, those models later exhibited malicious behavior across arbitrary prompts containing that trigger (even in casual conversation!). Similar effects appeared with narrow training on bad medical advice or risky financial guidance, which caused misalignment far beyond those specific domains (i.e. suggesting dangerous self&#8209;treatment and encouraging fraudulent behavior).</p>
+
+    <p>This suggests that even a small amount of fine tuning on a narrow capability can lead to broad, unsettling shifts in the model&rsquo;s safety properties and behavior. It also creates a gray space between model capability changes vs. alignment changes, as they may be more intertwined than we realized.</p>
+
+    <p>Additionally, &lsquo;helpfulness&rsquo; in post-training typically consists of following a set of instructions, being resourceful in solving the user&rsquo;s problem, using external information effectively, and providing detailed, organized explanations. When you apply this training across all domains&mdash;including coding, persuasion, or specialized fields like biology or cybersecurity&mdash;&lsquo;more helpful&rsquo; can simply mean &lsquo;better at doing whatever the user asks,&rsquo; whether that request is harmless or harmful.</p>
+
+    <p>This pattern cuts both ways: Training for helpful coding assistance improves a model&rsquo;s ability to write both secure and insecure code. Training for thoughtful guidance can make manipulation more effective. Training for structured reasoning can help models plan complex harmful actions if safety limits aren&rsquo;t strong enough.</p>
+
+    <p>In other words, post-training doesn&rsquo;t just filter what models say; it shapes how they think and solve problems. That reshaping can form dangerous capabilities right alongside helpful ones. This brings me back to my main question: As we optimize models to be more helpful and aligned, how often are we absent-mindedly increasing dangerous capabilities, especially in sensitive domains?</p>
+
+    <p>Every technique that makes a model better at reasoning, following complex instructions, and/or using tools effectively doesn&rsquo;t discriminate by intent. We cannot train models to be helpful only for good requests. The narrow post-training results suggest that even small, focused tweaks can create broad shifts in both capabilities and safety properties. If we are serious about safety, I believe we need more evidence and understanding of post-training overall, including evals that track capability gains in dangerous domains during alignment training, or a solid framework to truly determine where helpfulness and safety genuinely align versus when they&rsquo;re in tension.</p>
+  </article>
+</main>
+
+<footer class="site-footer">
+  <div class="wave" aria-hidden="true">
+    <svg viewBox="0 0 600 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 30 C 150 60, 450 0, 600 30 L 600 60 L 0 60 Z" fill="#f7d9e2"/>
+    </svg>
+  </div>
+  <p>&copy; <span id="year"></span> Oindree Chatterjee</p>
+</footer>
+
+<script src="../js/script.js"></script>
+</body>
+</html>

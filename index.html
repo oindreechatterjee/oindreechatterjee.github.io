@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Oindree Chatterjee</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Special+Elite&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="corner corner-tl" aria-hidden="true">
+  <svg viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
+    <path d="M10 10 C 60 30, 90 70, 60 110" fill="none" stroke="#bcd8b0" stroke-width="3"/>
+    <path d="M20 20 C 70 20, 100 60, 80 100" fill="none" stroke="#bcd8b0" stroke-width="2"/>
+    <g fill="#f3c6d3"><circle cx="30" cy="25" r="10"/><circle cx="50" cy="15" r="8"/><circle cx="20" cy="45" r="7"/></g>
+    <g fill="#f7d9e2"><circle cx="70" cy="45" r="9"/><circle cx="90" cy="65" r="7"/></g>
+  </svg>
+</div>
+<div class="corner corner-tr" aria-hidden="true">
+  <svg viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
+    <g transform="translate(160,40)">
+      <circle cx="0" cy="-28" r="20" fill="#f2a7bd"/>
+      <circle cx="26" cy="-14" r="20" fill="#f2a7bd"/>
+      <circle cx="26" cy="14" r="20" fill="#f2a7bd"/>
+      <circle cx="0" cy="28" r="20" fill="#f2a7bd"/>
+      <circle cx="-26" cy="14" r="20" fill="#f2a7bd"/>
+      <circle cx="-26" cy="-14" r="20" fill="#f2a7bd"/>
+      <circle cx="0" cy="0" r="14" fill="#fbe2c8"/>
+    </g>
+    <g fill="#f7d9e2"><circle cx="55" cy="90" r="8"/><circle cx="35" cy="70" r="6"/></g>
+  </svg>
+</div>
+
+<header class="site-header">
+  <a class="brand" href="#home" data-tab-link="home">Oindree Chatterjee</a>
+  <nav class="tabs" aria-label="Primary">
+    <button class="tab-link active" data-tab-link="home">Home</button>
+    <button class="tab-link" data-tab-link="research">Research</button>
+    <button class="tab-link" data-tab-link="photography">Photography</button>
+    <button class="tab-link" data-tab-link="projects">Projects</button>
+  </nav>
+</header>
+
+<main>
+
+  <section id="home" class="tab-panel active">
+    <div class="hero">
+      <div class="hero-text">
+        <!--<p class="eyebrow">University of California, Berkeley</p>-->
+        <h1 class="script-title">Hi, I'm Oindree</h1>
+        <p class="lede">I'm a rising senior at UC Berkeley studying Electrical Engineering &amp; Computer Sciences (EECS)! I've been involved in CS education research, photography, and a number of ML-related projects. This is where I share my work, my pictures, and the projects I tinker with.</p>
+        <div class="badge-row">
+          <span class="scallop-badge">Berkeley, California</span>
+        </div>
+        <div class="cta-row">
+          <button class="btn btn-primary" data-tab-link="research">See my research</button>
+          <button class="btn btn-ghost" data-tab-link="photography">View photography</button>
+        </div>
+      </div>
+      <figure class="portrait-frame">
+        <img src="assets/oindree_headshot.jpg" alt="Oindree Chatterjee">
+      </figure>
+    </div>
+    <div class="flower-divider" aria-hidden="true">
+      <svg viewBox="0 0 600 40" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 20 C 150 0, 450 40, 600 20" stroke="#f2a7bd" stroke-width="2" fill="none"/>
+      </svg>
+    </div>
+  </section>
+
+  <section id="research" class="tab-panel">
+    <h2 class="section-title">Research</h2>
+    <p class="section-sub">Publications and writing in CS education and AI safety.</p>
+
+    <h3 class="subsection-title">Publications</h3>
+    <div class="card-grid">
+      <article class="card">
+        <span class="card-tag">SIGCSE Virtual 2026 &middot; Accepted</span>
+        <h3>Are CS0 Grades Less Consistent Predictors of CS1 Outcomes After Mastery-Based Assessment?</h3>
+        <p class="card-authors">Kerry Pan, Andrew Phuong, <strong>Oindree Chatterjee</strong>, Jamil Shirinov, Jadyn Miyahira, Maya Sriram, Dan Garcia</p>
+        <p>Accepted for the SIGCSE Virtual 2026 program.</p>
+        <span class="card-link card-link-soon">Paper coming December 2026</span>
+      </article>
+      <article class="card">
+        <span class="card-tag">SIGCSE 2026</span>
+        <h3>The Cost of Catching Up: Investigating the Impact of Late Enrollment on Student Success in a CS0 Course</h3>
+        <p class="card-authors">Victoria Phelps, Sahana Bharadwaj, Aananya Lakhani, Zihao Huang, Heidy Hernandez, <strong>Oindree Chatterjee</strong>, Jordan Schwartz, Stacey Yoo, Dan Garcia</p>
+        <div class="card-abstract collapsed">
+          <p>Late enrollment in computer science courses presents unique challenges that may impact student performance, engagement, and retention. This paper investigates the academic trajectories of late enrollees compared to their on-time peers, focusing on performance across different assessment types, the cumulative impact of coursework, and engagement with course resources such as office hours, discussion sections, and review sessions. Using enrollment data, course performance metrics, and student engagement records, we conduct an analysis of academic outcomes across various demographics and examine potential policy and instructional interventions, such as modular course structures or expanded support services, to mitigate performance gaps. Our findings contribute to ongoing discussions on equitable access to computer science education by identifying structural barriers that hinder late enrollees' success.</p>
+          <button class="abstract-toggle">Read more &#43;</button>
+        </div>
+        <a class="card-link" href="https://doi.org/10.1145/3770762.3772658" target="_blank" rel="noopener">Read paper &rarr;</a>
+      </article>
+      <article class="card">
+        <span class="card-tag">SIGCSE 2026</span>
+        <h3>Too Late to Succeed? Demographic Trends and Academic Performance in Introductory Computing</h3>
+        <p class="card-authors">Victoria Phelps, Sahana Bharadwaj, Zihao Huang, Aananya Lakhani, <strong>Oindree Chatterjee</strong>, Heidy Hernandez, Jordan Schwartz, Anneliese Galler, Stacey Yoo</p>
+        <div class="card-abstract collapsed">
+          <p>Late enrollment in introductory computing is common yet consequential. Analyzing two offerings of an introductory computing course (Term 1: n=204; Term 2: n=79), we find sharply elevated failure rates for Week 4 enrollees (Term 1: 41% F; Term 2: 100% F) versus on-time peers (Week 0 failures: 10% and 2%). These outcomes coincide with markedly lower engagement in support resources (office hours, exam reviews). While some subgroups (e.g., URM late enrollees) show pockets of resilience, performance by gender experiences dramatic changes. Results suggest late entry beyond Week 2 in cumulative, fast-paced courses is a high-risk policy point, and that structured catch-up and mandatory early support are critical.</p>
+          <button class="abstract-toggle">Read more &#43;</button>
+        </div>
+        <a class="card-link" href="https://doi.org/10.1145/3770761.3777160" target="_blank" rel="noopener">Read paper &rarr;</a>
+      </article>
+      <article class="card">
+        <span class="card-tag">SIGCSE 2026 &middot; First author</span>
+        <h3>Developing and Sustaining Summer Bridge Programs</h3>
+        <p class="card-authors"><strong>Oindree Chatterjee</strong>, Carolyn Wang, Alvaro Monge, Colleen M. Lewis, Narges Norouzi</p>
+        <div class="card-abstract collapsed">
+          <p>We aim to bring together colleagues who share a common interest in Computer Science and Engineering Bridge programs, which are designed to bridge the gap for less experienced and/or underserved students as they begin their university studies. We invite those interested in starting bridge programs at their institutions, as well as those knowledgeable about existing bridge programs, their best practices, and lessons learned. Together, we discuss the most effective approaches to these programs and challenges that arise in their implementations, including exclusivity in the selection of admits, target audience, funding limitations, outreach, and more. Our goal is to foster conversation and create a network of support so these programs can sustain despite general discouragement.</p>
+          <button class="abstract-toggle">Read more &#43;</button>
+        </div>
+        <a class="card-link" href="https://doi.org/10.1145/3770761.3777094" target="_blank" rel="noopener">Read paper &rarr;</a>
+      </article>
+      <article class="card">
+        <span class="card-tag">SIGCSE 2025 &middot; First author</span>
+        <h3>AutoRemind: Improving Student Academic Performance Through a Personalized and Automated Notification System</h3>
+        <p class="card-authors"><strong>Oindree Chatterjee</strong>, Ankita Sundar, Arihant Choudhary, Connor Robert Bernard, Dan Garcia</p>
+        <div class="card-abstract collapsed">
+          <p>University students, with their busy schedules and endless assignments, often struggle to remember due dates, upcoming tasks, and available course resources. We are developing AutoRemind, an opt-in notification tool that delivers personalized reminders for upcoming tasks and course resources via students' preferred communication platforms. AutoRemind integrates with Learning Management Systems (LMS) to extract real-time data on student progress, assignment status, and available resources. This microservice, built for the GradeView platform, serves as a centralized hub for students to access all course deadlines and resources from a single source of truth. The tool is not specific to computer science classes, so it has potentially broad reach — improving academic performance, increasing course engagement, reducing administrative burdens on instructors, and supporting mastery learning.</p>
+          <button class="abstract-toggle">Read more &#43;</button>
+        </div>
+        <a class="card-link" href="https://doi.org/10.1145/3641555.3705133" target="_blank" rel="noopener">Read paper &rarr;</a>
+      </article>
+    </div>
+
+    <h3 class="subsection-title">Writing</h3>
+    <div class="writing-list">
+      <a class="writing-item" href="articles/the-variance-of-ai-safety.html">
+        <span class="writing-date">Apr 2026</span>
+        <span class="writing-body">
+          <span class="writing-title">The Variance of AI Safety, from Source Maps to Supply Chains</span>
+          <span class="writing-blurb">Why safety guarantees fall apart without security — lessons from the Claude Code leak and the LiteLLM supply-chain breach.</span>
+        </span>
+      </a>
+      <a class="writing-item" href="articles/reward-hacking-in-cs-education.html">
+        <span class="writing-date">Mar 2026</span>
+        <span class="writing-body">
+          <span class="writing-title">Reward Hacking in CS Education</span>
+          <span class="writing-blurb">When the grade is the reward and AI is one tab away — on measurement, over-reliance, and metacognition in the GenAI era.</span>
+        </span>
+      </a>
+      <a class="writing-item" href="articles/when-alignment-training-boosts-dangerous-capabilities.html">
+        <span class="writing-date">Feb 2026</span>
+        <span class="writing-body">
+          <span class="writing-title">When Alignment Training Boosts Dangerous Capabilities</span>
+          <span class="writing-blurb">Post-training is sold as alignment, but it's also a capability driver — on narrow fine-tuning and emergent misalignment.</span>
+        </span>
+      </a>
+    </div>
+  </section>
+
+  <section id="photography" class="tab-panel">
+    <h2 class="section-title">Photography</h2>
+    <p class="section-sub">This is my replacement of VSCO :,) I currently serve as the Photography Lead for Heartstrings @ Cal (UC Berkeley's 1st music wellness club!)</p>
+
+    <div class="gallery-filters" role="tablist" aria-label="Photo categories">
+      <button class="filter-chip active" data-filter="all">All</button>
+      <button class="filter-chip" data-filter="nature">Nature</button>
+      <button class="filter-chip" data-filter="city">City &amp; Travel</button>
+      <button class="filter-chip" data-filter="people">People &amp; Moments</button>
+    </div>
+
+    <div class="photo-gallery">
+      <figure class="gallery-tile" data-category="nature" data-caption="Mountain heather in bloom" data-desc="A slope of pink mountain heather catching the alpine sun.">
+        <div class="tile-media" style="--ar: 3 / 2"><img src="assets/nature.jpeg" alt="Pink mountain heather wildflowers blooming on a rocky slope" loading="lazy"></div>
+        <figcaption class="tile-overlay"><span class="tile-title">Mountain heather in bloom</span><span class="tile-desc">A slope of pink mountain heather catching the alpine sun.</span></figcaption>
+      </figure>
+      <figure class="gallery-tile" data-category="city" data-caption="The Gastown Steam Clock" data-desc="Steam rising over the flower baskets in Gastown, Vancouver.">
+        <div class="tile-media" style="--ar: 3 / 2"><img src="assets/travel.jpeg" alt="The Gastown Steam Clock in Vancouver surrounded by hanging flower baskets and street lamps" loading="lazy"></div>
+        <figcaption class="tile-overlay"><span class="tile-title">The Gastown Steam Clock</span><span class="tile-desc">Steam rising over the flower baskets in Gastown, Vancouver.</span></figcaption>
+      </figure>
+      <figure class="gallery-tile" data-category="people" data-caption="Lunchtime set at Zellerbach" data-desc="A guitarist mid-song outside Zellerbach Hall on a sunny afternoon.">
+        <div class="tile-media" style="--ar: 2 / 3"><img src="assets/people1.jpeg" alt="A young man singing and playing acoustic guitar outside Zellerbach Hall" loading="lazy"></div>
+        <figcaption class="tile-overlay"><span class="tile-title">Lunchtime set at Zellerbach</span><span class="tile-desc">A guitarist mid-song outside Zellerbach Hall on a sunny afternoon.</span></figcaption>
+      </figure>
+      <figure class="gallery-tile" data-category="nature" data-caption="Hiding in the bougainvillea" data-desc="A little bird tucked into a hillside of red blooms by the coast.">
+        <div class="tile-media" style="--ar: 2 / 3"><img src="assets/nature_2.jpeg" alt="A small bird perched in a hedge of red bougainvillea flowers" loading="lazy"></div>
+        <figcaption class="tile-overlay"><span class="tile-title">Hiding in the bougainvillea</span><span class="tile-desc">A little bird tucked into a hillside of red blooms by the coast.</span></figcaption>
+      </figure>
+      <figure class="gallery-tile" data-category="city" data-caption="Pebble beach tide" data-desc="Small waves rolling onto a stony Pacific Northwest shore.">
+        <div class="tile-media" style="--ar: 3 / 2"><img src="assets/travel_1.jpeg" alt="Gentle waves washing over a pebble beach with a forested point in the distance" loading="lazy"></div>
+        <figcaption class="tile-overlay"><span class="tile-title">Pebble beach tide</span><span class="tile-desc">Small waves rolling onto a stony Pacific Northwest shore.</span></figcaption>
+      </figure>
+      <figure class="gallery-tile" data-category="people" data-caption="Golden hour, golden sax" data-desc="All smiles between songs at an outdoor campus performance.">
+        <div class="tile-media" style="--ar: 3 / 2"><img src="assets/people.jpeg" alt="A smiling saxophonist in white sunglasses performing outdoors" loading="lazy"></div>
+        <figcaption class="tile-overlay"><span class="tile-title">Golden hour, golden sax</span><span class="tile-desc">All smiles between songs at an outdoor campus performance.</span></figcaption>
+      </figure>
+      <figure class="gallery-tile" data-category="nature" data-caption="The pollinator at work" data-desc="A bumblebee landing on white coneflowers against hot pink blooms.">
+        <div class="tile-media" style="--ar: 3 / 2"><img src="assets/nature_1.jpeg" alt="A bumblebee on a white coneflower with bright pink flowers behind" loading="lazy"></div>
+        <figcaption class="tile-overlay"><span class="tile-title">The pollinator at work</span><span class="tile-desc">A bumblebee landing on white coneflowers against hot pink blooms.</span></figcaption>
+      </figure>
+      <figure class="gallery-tile" data-category="city" data-caption="Sonic Bloom, Space Needle" data-desc="Looking up through the flower sculptures at Seattle Center.">
+        <div class="tile-media" style="--ar: 3 / 2"><img src="assets/travel_2.jpeg" alt="The Seattle Space Needle framed by giant orange and green flower sculptures" loading="lazy"></div>
+        <figcaption class="tile-overlay"><span class="tile-title">Sonic Bloom, Space Needle</span><span class="tile-desc">Looking up through the flower sculptures at Seattle Center.</span></figcaption>
+      </figure>
+      <figure class="gallery-tile" data-category="people" data-caption="Strings before the show" data-desc="Three musicians and their instruments, ready to play.">
+        <div class="tile-media" style="--ar: 2 / 3"><img src="assets/people_2.jpeg" alt="Three women holding violins and a viola, smiling outdoors" loading="lazy"></div>
+        <figcaption class="tile-overlay"><span class="tile-title">Strings before the show</span><span class="tile-desc">Three musicians and their instruments, ready to play.</span></figcaption>
+      </figure>
+      <figure class="gallery-tile" data-category="nature" data-caption="Pelicans over the bay" data-desc="Three pelicans gliding past a fog-capped headland.">
+        <div class="tile-media" style="--ar: 3 / 2"><img src="assets/nature_3.jpeg" alt="Three pelicans flying low over blue water with a foggy headland behind" loading="lazy"></div>
+        <figcaption class="tile-overlay"><span class="tile-title">Pelicans over the bay</span><span class="tile-desc">Three pelicans gliding past a fog-capped headland.</span></figcaption>
+      </figure>
+      <figure class="gallery-tile" data-category="nature" data-caption="Snack break" data-desc="A ground squirrel enjoying a berry on the rocks.">
+        <div class="tile-media" style="--ar: 3 / 2"><img src="assets/nature_5.jpeg" alt="A golden-mantled ground squirrel eating a red berry on a rock" loading="lazy"></div>
+        <figcaption class="tile-overlay"><span class="tile-title">Snack break</span><span class="tile-desc">A ground squirrel enjoying a berry on the rocks.</span></figcaption>
+      </figure>
+      <figure class="gallery-tile" data-category="nature" data-caption="The lookout" data-desc="Standing at attention in the meadow grass, snowfield behind.">
+        <div class="tile-media" style="--ar: 2 / 3"><img src="assets/nature_6.jpeg" alt="A ground squirrel standing upright in grass in front of a snowfield" loading="lazy"></div>
+        <figcaption class="tile-overlay"><span class="tile-title">The lookout</span><span class="tile-desc">Standing at attention in the meadow grass, snowfield behind.</span></figcaption>
+      </figure>
+      <figure class="gallery-tile" data-category="nature" data-caption="Egret on the bluff" data-desc="A great egret surveying the coastline from a crumbling cliff edge.">
+        <div class="tile-media" style="--ar: 1086 / 724"><img src="assets/nature-egret.jpeg" alt="Egret on the bluff &mdash; A great egret surveying the coastline from a crumbling cliff edge." loading="lazy"></div>
+        <figcaption class="tile-overlay"><span class="tile-title">Egret on the bluff</span><span class="tile-desc">A great egret surveying the coastline from a crumbling cliff edge.</span></figcaption>
+      </figure>
+      <figure class="gallery-tile" data-category="nature" data-caption="Lace-leaf maple" data-desc="The feathery layers of a laceleaf Japanese maple.">
+        <div class="tile-media" style="--ar: 1086 / 724"><img src="assets/nature-lace-maple.jpeg" alt="Lace-leaf maple &mdash; The feathery layers of a laceleaf Japanese maple." loading="lazy"></div>
+        <figcaption class="tile-overlay"><span class="tile-title">Lace-leaf maple</span><span class="tile-desc">The feathery layers of a laceleaf Japanese maple.</span></figcaption>
+      </figure>
+      <figure class="gallery-tile" data-category="nature" data-caption="Meadow watch" data-desc="A ground squirrel in profile against last season&#x27;s snow.">
+        <div class="tile-media" style="--ar: 724 / 1086"><img src="assets/nature-squirrel-watch.jpeg" alt="Meadow watch &mdash; A ground squirrel in profile against last season&#x27;s snow." loading="lazy"></div>
+        <figcaption class="tile-overlay"><span class="tile-title">Meadow watch</span><span class="tile-desc">A ground squirrel in profile against last season&#x27;s snow.</span></figcaption>
+      </figure>
+      <figure class="gallery-tile" data-category="nature" data-caption="Curious climber" data-desc="Up on a weathered log, checking the trail for snacks.">
+        <div class="tile-media" style="--ar: 1086 / 724"><img src="assets/nature-squirrel-log.jpeg" alt="Curious climber &mdash; Up on a weathered log, checking the trail for snacks." loading="lazy"></div>
+        <figcaption class="tile-overlay"><span class="tile-title">Curious climber</span><span class="tile-desc">Up on a weathered log, checking the trail for snacks.</span></figcaption>
+      </figure>
+      <figure class="gallery-tile" data-category="city" data-caption="The ivy takeover" data-desc="A collegiate hall slowly disappearing under a wall of ivy.">
+        <div class="tile-media" style="--ar: 724 / 1086"><img src="assets/city-ivy-hall.jpeg" alt="The ivy takeover &mdash; A collegiate hall slowly disappearing under a wall of ivy." loading="lazy"></div>
+        <figcaption class="tile-overlay"><span class="tile-title">The ivy takeover</span><span class="tile-desc">A collegiate hall slowly disappearing under a wall of ivy.</span></figcaption>
+      </figure>
+      <figure class="gallery-tile" data-category="city" data-caption="Bloom with a view" data-desc="A crow claims the tallest Sonic Bloom flower against the Seattle skyline.">
+        <div class="tile-media" style="--ar: 1086 / 724"><img src="assets/city-sonic-bloom-crow.jpeg" alt="Bloom with a view &mdash; A crow claims the tallest Sonic Bloom flower against the Seattle skyline." loading="lazy"></div>
+        <figcaption class="tile-overlay"><span class="tile-title">Bloom with a view</span><span class="tile-desc">A crow claims the tallest Sonic Bloom flower against the Seattle skyline.</span></figcaption>
+      </figure>
+      <figure class="gallery-tile" data-category="city" data-caption="The Spheres" data-desc="Glass domes and greenery on Lenora Street, Seattle.">
+        <div class="tile-media" style="--ar: 1086 / 724"><img src="assets/city-amazon-spheres.jpeg" alt="The Spheres &mdash; Glass domes and greenery on Lenora Street, Seattle." loading="lazy"></div>
+        <figcaption class="tile-overlay"><span class="tile-title">The Spheres</span><span class="tile-desc">Glass domes and greenery on Lenora Street, Seattle.</span></figcaption>
+      </figure>
+      <figure class="gallery-tile" data-category="city" data-caption="Ferns among towers" data-desc="Tree ferns thriving in a downtown pocket garden.">
+        <div class="tile-media" style="--ar: 724 / 1086"><img src="assets/city-tree-ferns.jpeg" alt="Ferns among towers &mdash; Tree ferns thriving in a downtown pocket garden." loading="lazy"></div>
+        <figcaption class="tile-overlay"><span class="tile-title">Ferns among towers</span><span class="tile-desc">Tree ferns thriving in a downtown pocket garden.</span></figcaption>
+      </figure>
+      <figure class="gallery-tile" data-category="city" data-caption="Going up" data-desc="The Space Needle&#x27;s golden elevator mid-climb.">
+        <div class="tile-media" style="--ar: 1086 / 724"><img src="assets/city-needle-elevator.jpeg" alt="Going up &mdash; The Space Needle&#x27;s golden elevator mid-climb." loading="lazy"></div>
+        <figcaption class="tile-overlay"><span class="tile-title">Going up</span><span class="tile-desc">The Space Needle&#x27;s golden elevator mid-climb.</span></figcaption>
+      </figure>
+      <figure class="gallery-tile" data-category="city" data-caption="Seattle from Kerry Park" data-desc="The classic skyline view, Space Needle front and center.">
+        <div class="tile-media" style="--ar: 1086 / 724"><img src="assets/city-seattle-skyline.jpeg" alt="Seattle from Kerry Park &mdash; The classic skyline view, Space Needle front and center." loading="lazy"></div>
+        <figcaption class="tile-overlay"><span class="tile-title">Seattle from Kerry Park</span><span class="tile-desc">The classic skyline view, Space Needle front and center.</span></figcaption>
+      </figure>
+      <figure class="gallery-tile" data-category="city" data-caption="Pink elephant" data-desc="Seattle&#x27;s vintage Elephant Super Car Wash sign, still smiling.">
+        <div class="tile-media" style="--ar: 724 / 1086"><img src="assets/city-pink-elephant.jpeg" alt="Pink elephant &mdash; Seattle&#x27;s vintage Elephant Super Car Wash sign, still smiling." loading="lazy"></div>
+        <figcaption class="tile-overlay"><span class="tile-title">Pink elephant</span><span class="tile-desc">Seattle&#x27;s vintage Elephant Super Car Wash sign, still smiling.</span></figcaption>
+      </figure>
+      <figure class="gallery-tile" data-category="city" data-caption="Under the saucer" data-desc="Looking straight up the Space Needle as the elevator descends.">
+        <div class="tile-media" style="--ar: 724 / 1086"><img src="assets/city-needle-underside.jpeg" alt="Under the saucer &mdash; Looking straight up the Space Needle as the elevator descends." loading="lazy"></div>
+        <figcaption class="tile-overlay"><span class="tile-title">Under the saucer</span><span class="tile-desc">Looking straight up the Space Needle as the elevator descends.</span></figcaption>
+      </figure>
+      <figure class="gallery-tile" data-category="city" data-caption="The Gum Wall" data-desc="Pike Place&#x27;s strangest landmark, one piece at a time.">
+        <div class="tile-media" style="--ar: 1066 / 1600"><img src="assets/city-gum-wall.jpeg" alt="The Gum Wall &mdash; Pike Place&#x27;s strangest landmark, one piece at a time." loading="lazy"></div>
+        <figcaption class="tile-overlay"><span class="tile-title">The Gum Wall</span><span class="tile-desc">Pike Place&#x27;s strangest landmark, one piece at a time.</span></figcaption>
+      </figure>
+      <figure class="gallery-tile" data-category="people" data-caption="The lavender crew" data-desc="Matching hoodies and finger hearts on movie night.">
+        <div class="tile-media" style="--ar: 1086 / 724"><img src="assets/people-lavender-crew.jpeg" alt="The lavender crew &mdash; Matching hoodies and finger hearts on movie night." loading="lazy"></div>
+        <figcaption class="tile-overlay"><span class="tile-title">The lavender crew</span><span class="tile-desc">Matching hoodies and finger hearts on movie night.</span></figcaption>
+      </figure>
+      <figure class="gallery-tile" data-category="people" data-caption="Golden hour in the hills" data-desc="Sunset light over the East Bay.">
+        <div class="tile-media" style="--ar: 724 / 1086"><img src="assets/people-golden-hour-hills.jpeg" alt="Golden hour in the hills &mdash; Sunset light over the East Bay." loading="lazy"></div>
+        <figcaption class="tile-overlay"><span class="tile-title">Golden hour in the hills</span><span class="tile-desc">Sunset light over the East Bay.</span></figcaption>
+      </figure>
+      <figure class="gallery-tile" data-category="people" data-caption="Coffee and heart hands" data-desc="A caffeine stop that turned into a photo shoot.">
+        <div class="tile-media" style="--ar: 1086 / 724"><img src="assets/people-cafe-hearts.jpeg" alt="Coffee and heart hands &mdash; A caffeine stop that turned into a photo shoot." loading="lazy"></div>
+        <figcaption class="tile-overlay"><span class="tile-title">Coffee and heart hands</span><span class="tile-desc">A caffeine stop that turned into a photo shoot.</span></figcaption>
+      </figure>
+      <figure class="gallery-tile" data-category="people" data-caption="Portrait by the colonnade" data-desc="Campus portrait session, blazer edition.">
+        <div class="tile-media" style="--ar: 724 / 1086"><img src="assets/people-portrait-blazer.jpeg" alt="Portrait by the colonnade &mdash; Campus portrait session, blazer edition." loading="lazy"></div>
+        <figcaption class="tile-overlay"><span class="tile-title">Portrait by the colonnade</span><span class="tile-desc">Campus portrait session, blazer edition.</span></figcaption>
+      </figure>
+      <figure class="gallery-tile" data-category="people" data-caption="Patio pair" data-desc="Purple lanyards and warm drinks on a foggy morning.">
+        <div class="tile-media" style="--ar: 3 / 2"><img src="assets/people-cafe-pair.jpeg" alt="Patio pair &mdash; Purple lanyards and warm drinks on a foggy morning." loading="lazy"></div>
+        <figcaption class="tile-overlay"><span class="tile-title">Patio pair</span><span class="tile-desc">Purple lanyards and warm drinks on a foggy morning.</span></figcaption>
+      </figure>
+      <figure class="gallery-tile" data-category="people" data-caption="Cafe catch-up" data-desc="Iced lattes and good company on the patio.">
+        <div class="tile-media" style="--ar: 724 / 1086"><img src="assets/people-cafe-six.jpeg" alt="Cafe catch-up &mdash; Iced lattes and good company on the patio." loading="lazy"></div>
+        <figcaption class="tile-overlay"><span class="tile-title">Cafe catch-up</span><span class="tile-desc">Iced lattes and good company on the patio.</span></figcaption>
+      </figure>
+      <figure class="gallery-tile" data-category="people" data-caption="Patio smiles" data-desc="Three friends, three drinks, one gray-sky afternoon.">
+        <div class="tile-media" style="--ar: 1086 / 724"><img src="assets/people-cafe-trio.jpeg" alt="Patio smiles &mdash; Three friends, three drinks, one gray-sky afternoon." loading="lazy"></div>
+        <figcaption class="tile-overlay"><span class="tile-title">Patio smiles</span><span class="tile-desc">Three friends, three drinks, one gray-sky afternoon.</span></figcaption>
+      </figure>
+      <figure class="gallery-tile" data-category="people" data-caption="Campus portrait" data-desc="All smiles by the old stone columns.">
+        <div class="tile-media" style="--ar: 724 / 1086"><img src="assets/people-portrait-campus.jpeg" alt="Campus portrait &mdash; All smiles by the old stone columns." loading="lazy"></div>
+        <figcaption class="tile-overlay"><span class="tile-title">Campus portrait</span><span class="tile-desc">All smiles by the old stone columns.</span></figcaption>
+      </figure>
+      <figure class="gallery-tile" data-category="people" data-caption="Tabling for DiversaTech" data-desc="Recruiting season smiles at the club fair.">
+        <div class="tile-media" style="--ar: 724 / 1086"><img src="assets/people-diversatech.jpeg" alt="Tabling for DiversaTech &mdash; Recruiting season smiles at the club fair." loading="lazy"></div>
+        <figcaption class="tile-overlay"><span class="tile-title">Tabling for DiversaTech</span><span class="tile-desc">Recruiting season smiles at the club fair.</span></figcaption>
+      </figure>
+      <figure class="gallery-tile" data-category="people" data-caption="Four at the top" data-desc="Sunset hike crew above the East Bay.">
+        <div class="tile-media" style="--ar: 724 / 1086"><img src="assets/people-hilltop-four.jpeg" alt="Four at the top &mdash; Sunset hike crew above the East Bay." loading="lazy"></div>
+        <figcaption class="tile-overlay"><span class="tile-title">Four at the top</span><span class="tile-desc">Sunset hike crew above the East Bay.</span></figcaption>
+      </figure>
+      <figure class="gallery-tile" data-category="people" data-caption="Between takes" data-desc="Quiet focus during an acoustic session.">
+        <div class="tile-media" style="--ar: 724 / 1086"><img src="assets/people-guitarist-inside.jpeg" alt="Between takes &mdash; Quiet focus during an acoustic session." loading="lazy"></div>
+        <figcaption class="tile-overlay"><span class="tile-title">Between takes</span><span class="tile-desc">Quiet focus during an acoustic session.</span></figcaption>
+      </figure>
+      <figure class="gallery-tile" data-category="people" data-caption="Duet practice" data-desc="Guitar and violin finding the same tempo.">
+        <div class="tile-media" style="--ar: 1086 / 724"><img src="assets/people-duet.jpeg" alt="Duet practice &mdash; Guitar and violin finding the same tempo." loading="lazy"></div>
+        <figcaption class="tile-overlay"><span class="tile-title">Duet practice</span><span class="tile-desc">Guitar and violin finding the same tempo.</span></figcaption>
+      </figure>
+      <figure class="gallery-tile" data-category="people" data-caption="Golden hour lineup" data-desc="Five friends and a whole city below.">
+        <div class="tile-media" style="--ar: 1086 / 724"><img src="assets/people-hillside-five.jpeg" alt="Golden hour lineup &mdash; Five friends and a whole city below." loading="lazy"></div>
+        <figcaption class="tile-overlay"><span class="tile-title">Golden hour lineup</span><span class="tile-desc">Five friends and a whole city below.</span></figcaption>
+      </figure>
+      <figure class="gallery-tile" data-category="people" data-caption="The whole cohort" data-desc="Heart hands from everyone on the last day.">
+        <div class="tile-media" style="--ar: 1600 / 1215"><img src="assets/people-cohort-hearts.jpeg" alt="The whole cohort &mdash; Heart hands from everyone on the last day." loading="lazy"></div>
+        <figcaption class="tile-overlay"><span class="tile-title">The whole cohort</span><span class="tile-desc">Heart hands from everyone on the last day.</span></figcaption>
+      </figure>
+      <figure class="gallery-tile" data-category="people" data-caption="City lights portrait" data-desc="Blue hour above the glowing skyline.">
+        <div class="tile-media" style="--ar: 724 / 1086"><img src="assets/people-city-lights.jpeg" alt="City lights portrait &mdash; Blue hour above the glowing skyline." loading="lazy"></div>
+        <figcaption class="tile-overlay"><span class="tile-title">City lights portrait</span><span class="tile-desc">Blue hour above the glowing skyline.</span></figcaption>
+      </figure>
+      <figure class="gallery-tile" data-category="people" data-caption="Park afternoon" data-desc="Golden light and green grass.">
+        <div class="tile-media" style="--ar: 724 / 1086"><img src="assets/people-park-afternoon.jpeg" alt="Park afternoon &mdash; Golden light and green grass." loading="lazy"></div>
+        <figcaption class="tile-overlay"><span class="tile-title">Park afternoon</span><span class="tile-desc">Golden light and green grass.</span></figcaption>
+      </figure>
+      <figure class="gallery-tile" data-category="people" data-caption="Sun-dappled" data-desc="A twirl in the park shade.">
+        <div class="tile-media" style="--ar: 724 / 1086"><img src="assets/people-park-pose.jpeg" alt="Sun-dappled &mdash; A twirl in the park shade." loading="lazy"></div>
+        <figcaption class="tile-overlay"><span class="tile-title">Sun-dappled</span><span class="tile-desc">A twirl in the park shade.</span></figcaption>
+      </figure>
+      <figure class="gallery-tile" data-category="people" data-caption="Before the presentation" data-desc="Business casual and campus sunshine.">
+        <div class="tile-media" style="--ar: 724 / 1086"><img src="assets/people-three-by-lamppost.jpeg" alt="Before the presentation &mdash; Business casual and campus sunshine." loading="lazy"></div>
+        <figcaption class="tile-overlay"><span class="tile-title">Before the presentation</span><span class="tile-desc">Business casual and campus sunshine.</span></figcaption>
+      </figure>
+      <figure class="gallery-tile" data-category="people" data-caption="Portrait with attitude" data-desc="Arms crossed, camera ready.">
+        <div class="tile-media" style="--ar: 724 / 1086"><img src="assets/people-purple-portrait.jpeg" alt="Portrait with attitude &mdash; Arms crossed, camera ready." loading="lazy"></div>
+        <figcaption class="tile-overlay"><span class="tile-title">Portrait with attitude</span><span class="tile-desc">Arms crossed, camera ready.</span></figcaption>
+      </figure>
+      <figure class="gallery-tile" data-category="people" data-caption="Leaders panel" data-desc="Listening in as women in tech share their paths.">
+        <div class="tile-media" style="--ar: 1086 / 724"><img src="assets/people-leaders-panel.jpeg" alt="Leaders panel &mdash; Listening in as women in tech share their paths." loading="lazy"></div>
+        <figcaption class="tile-overlay"><span class="tile-title">Leaders panel</span><span class="tile-desc">Listening in as women in tech share their paths.</span></figcaption>
+      </figure>
+      <figure class="gallery-tile" data-category="people" data-caption="Trail buddies" data-desc="All smiles on the Skyline Trail.">
+        <div class="tile-media" style="--ar: 724 / 1086"><img src="assets/people-rainier-pair.jpeg" alt="Trail buddies &mdash; All smiles on the Skyline Trail." loading="lazy"></div>
+        <figcaption class="tile-overlay"><span class="tile-title">Trail buddies</span><span class="tile-desc">All smiles on the Skyline Trail.</span></figcaption>
+      </figure>
+      <figure class="gallery-tile" data-category="people" data-caption="Game night" data-desc="Lining up the shot between laughs.">
+        <div class="tile-media" style="--ar: 1086 / 724"><img src="assets/people-pool-night.jpeg" alt="Game night &mdash; Lining up the shot between laughs." loading="lazy"></div>
+        <figcaption class="tile-overlay"><span class="tile-title">Game night</span><span class="tile-desc">Lining up the shot between laughs.</span></figcaption>
+      </figure>
+      <figure class="gallery-tile" data-category="people" data-caption="Made it up the mountain" data-desc="Peak happiness at Paradise.">
+        <div class="tile-media" style="--ar: 724 / 1086"><img src="assets/people-rainier-smile.jpeg" alt="Made it up the mountain &mdash; Peak happiness at Paradise." loading="lazy"></div>
+        <figcaption class="tile-overlay"><span class="tile-title">Made it up the mountain</span><span class="tile-desc">Peak happiness at Paradise.</span></figcaption>
+      </figure>
+      <figure class="gallery-tile" data-category="people" data-caption="Common room hangs" data-desc="Matching smiles on movie night.">
+        <div class="tile-media" style="--ar: 724 / 1086"><img src="assets/people-floor-friends.jpeg" alt="Common room hangs &mdash; Matching smiles on movie night." loading="lazy"></div>
+        <figcaption class="tile-overlay"><span class="tile-title">Common room hangs</span><span class="tile-desc">Matching smiles on movie night.</span></figcaption>
+      </figure>
+      <figure class="gallery-tile" data-category="people" data-caption="Hearts at dusk" data-desc="The whole crew above the twinkling East Bay.">
+        <div class="tile-media" style="--ar: 1086 / 724"><img src="assets/people-dusk-hearts.jpeg" alt="Hearts at dusk &mdash; The whole crew above the twinkling East Bay." loading="lazy"></div>
+        <figcaption class="tile-overlay"><span class="tile-title">Hearts at dusk</span><span class="tile-desc">The whole crew above the twinkling East Bay.</span></figcaption>
+      </figure>
+      <figure class="gallery-tile" data-category="people" data-caption="Sunset twins" data-desc="Two friends, one golden hour.">
+        <div class="tile-media" style="--ar: 724 / 1086"><img src="assets/people-sunset-pair.jpeg" alt="Sunset twins &mdash; Two friends, one golden hour." loading="lazy"></div>
+        <figcaption class="tile-overlay"><span class="tile-title">Sunset twins</span><span class="tile-desc">Two friends, one golden hour.</span></figcaption>
+      </figure>
+      <figure class="gallery-tile" data-category="people" data-caption="Skyline Trail trio" data-desc="Posing beneath the snowfields, photobomb included.">
+        <div class="tile-media" style="--ar: 724 / 1086"><img src="assets/people-rainier-trio.jpeg" alt="Skyline Trail trio &mdash; Posing beneath the snowfields, photobomb included." loading="lazy"></div>
+        <figcaption class="tile-overlay"><span class="tile-title">Skyline Trail trio</span><span class="tile-desc">Posing beneath the snowfields, photobomb included.</span></figcaption>
+      </figure>
+      <figure class="gallery-tile" data-category="people" data-caption="Career talk" data-desc="A packed room for the AI careers panel.">
+        <div class="tile-media" style="--ar: 724 / 1086"><img src="assets/people-career-talk.jpeg" alt="Career talk &mdash; A packed room for the AI careers panel." loading="lazy"></div>
+        <figcaption class="tile-overlay"><span class="tile-title">Career talk</span><span class="tile-desc">A packed room for the AI careers panel.</span></figcaption>
+      </figure>
+      <figure class="gallery-tile" data-category="people" data-caption="Golden hour hearts" data-desc="Ten hearts above Berkeley.">
+        <div class="tile-media" style="--ar: 1086 / 724"><img src="assets/people-hearts-ten.jpeg" alt="Golden hour hearts &mdash; Ten hearts above Berkeley." loading="lazy"></div>
+        <figcaption class="tile-overlay"><span class="tile-title">Golden hour hearts</span><span class="tile-desc">Ten hearts above Berkeley.</span></figcaption>
+      </figure>
+      <figure class="gallery-tile" data-category="people" data-caption="Post-hike glow" data-desc="Five smiles above the bay.">
+        <div class="tile-media" style="--ar: 1086 / 724"><img src="assets/people-hilltop-five.jpeg" alt="Post-hike glow &mdash; Five smiles above the bay." loading="lazy"></div>
+        <figcaption class="tile-overlay"><span class="tile-title">Post-hike glow</span><span class="tile-desc">Five smiles above the bay.</span></figcaption>
+      </figure>
+      <figure class="gallery-tile" data-category="people" data-caption="Backlit" data-desc="Golden hour portrait in the dry grass.">
+        <div class="tile-media" style="--ar: 724 / 1086"><img src="assets/people-golden-portrait.jpeg" alt="Backlit &mdash; Golden hour portrait in the dry grass." loading="lazy"></div>
+        <figcaption class="tile-overlay"><span class="tile-title">Backlit</span><span class="tile-desc">Golden hour portrait in the dry grass.</span></figcaption>
+      </figure>
+      <figure class="gallery-tile" data-category="people" data-caption="AI and engineering careers" data-desc="Panelists on AI, seniority, and the evolving identity of the engineer.">
+        <div class="tile-media" style="--ar: 1086 / 724"><img src="assets/people-ai-panel.jpeg" alt="AI and engineering careers &mdash; Panelists on AI, seniority, and the evolving identity of the engineer." loading="lazy"></div>
+        <figcaption class="tile-overlay"><span class="tile-title">AI and engineering careers</span><span class="tile-desc">Panelists on AI, seniority, and the evolving identity of the engineer.</span></figcaption>
+      </figure>
+    </div>
+
+    <div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Photo viewer">
+      <div class="lightbox-backdrop"></div>
+      <figure class="lightbox-content">
+        <div class="lightbox-media"></div>
+        <figcaption>
+          <span class="lightbox-title"></span>
+          <p class="lightbox-desc"></p>
+        </figcaption>
+        <button class="lightbox-close" aria-label="Close photo viewer">&#10005;</button>
+        <button class="lightbox-nav lightbox-prev" aria-label="Previous photo">&#8249;</button>
+        <button class="lightbox-nav lightbox-next" aria-label="Next photo">&#8250;</button>
+      </figure>
+    </div>
+  </section>
+
+  <section id="projects" class="tab-panel">
+    <h2 class="section-title">Projects</h2>
+    <p class="section-sub">Things I've built, big and small.</p>
+    <div class="card-grid">
+      <article class="card">
+        <span class="card-tag">EdTech &middot; In pilot at UC Berkeley</span>
+        <h3>AutoRemind</h3>
+        <p class="card-authors">Started as our SIGCSE 2025 paper &mdash; now a live service built by a six-person team</p>
+        <div class="card-abstract">
+          <p>An opt-in notification service that sends UC Berkeley students deadline reminders where they'll actually see them &mdash; email, SMS, or Discord &mdash; at intervals they choose. It integrates with course platforms to pull assignment deadlines and student progress in real time, acting as a single source of truth for what's due across a student's classes.</p>
+          <p>I lead the team of six developing autoremind.eecs.berkeley.edu, which is currently being piloted in Berkeley courses.</p>
+        </div>
+        <span class="card-links">
+          <a class="card-link" href="https://autoremind.eecs.berkeley.edu" target="_blank" rel="noopener">Visit the site &rarr;</a>
+          <a class="card-link" href="https://doi.org/10.1145/3641555.3705133" target="_blank" rel="noopener">Read the paper &rarr;</a>
+        </span>
+      </article>
+      <article class="card">
+        <span class="card-tag">AI &middot; Reinforcement Learning &middot; Web App</span>
+        <h3>CalCoach</h3>
+        <p class="card-authors">Team project with <a href="https://github.com/anjalisujithan" target="_blank" rel="noopener">@anjalisujithan</a>, <a href="https://github.com/carolynwangjy" target="_blank" rel="noopener">@carolynwangjy</a>, and <a href="https://github.com/susanna-at" target="_blank" rel="noopener">@susanna-at</a></p>
+        <div class="card-abstract">
+          <p>An AI scheduling coach that lives inside your Google Calendar. You tell it what you need to get done, it proposes time blocks, and you accept or reject them right inside your calendar. After each session, you give it feedback in natural language. It's not automated, it's interactive: you stay in control; CalCoach just makes the decisions easier.</p>
+          <p>Under the hood, a reinforcement learning&ndash;powered scheduling engine learns how you work best over time. A contextual bandit scores multiple schedule options in real time using signals like calendar availability, task type, timing, and user behavior &mdash; so instead of just placing tasks into open slots, CalCoach combines AI-generated schedule options with an RL-based ranking model shaped by your habits, preferences, and past feedback.</p>
+        </div>
+        <span class="card-links">
+          <a class="card-link" href="https://github.com/oindreechatterjee/calcoach" target="_blank" rel="noopener">View on GitHub &rarr;</a>
+          <!-- replace with: <a class="card-link" href="YOUTUBE_URL" target="_blank" rel="noopener">Watch demo &rarr;</a> -->
+          <span class="card-link card-link-soon">Demo video coming soon</span>
+        </span>
+      </article>
+    </div>
+  </section>
+
+</main>
+
+<div class="corner corner-bl" aria-hidden="true">
+  <svg viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
+    <g fill="#f7d9e2"><circle cx="30" cy="190" r="12"/><circle cx="55" cy="205" r="9"/><circle cx="15" cy="165" r="7"/></g>
+    <g fill="#f2a7bd"><circle cx="70" cy="185" r="8"/></g>
+  </svg>
+</div>
+
+<footer class="site-footer">
+  <div class="wave" aria-hidden="true">
+    <svg viewBox="0 0 600 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 30 C 150 60, 450 0, 600 30 L 600 60 L 0 60 Z" fill="#f7d9e2"/>
+    </svg>
+  </div>
+  <p>&copy; <span id="year"></span> Oindree Chatterjee</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

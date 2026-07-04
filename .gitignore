@@ -1,0 +1,8 @@
+# macOS system files
+.DS_Store
+
+# Claude Code personal settings (machine-specific)
+.claude/settings.local.json
+
+# unused original (site uses the compressed .jpg)
+assets/oindree_headshot.png
