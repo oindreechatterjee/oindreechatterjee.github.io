@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Variance of AI Safety, from Source Maps to Supply Chains &mdash; Oindree Chatterjee</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Special+Elite&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a class="brand" href="../index.html">Oindree Chatterjee</a>
+  <nav class="tabs" aria-label="Primary">
+    <a class="tab-link" href="../index.html#home">Home</a>
+    <a class="tab-link active" href="../index.html#research">Research</a>
+    <a class="tab-link" href="../index.html#photography">Photography</a>
+    <a class="tab-link" href="../index.html#projects">Projects</a>
+  </nav>
+</header>
+
+<main class="article-wrap">
+  <a class="back-link" href="../index.html#research">&larr; Back to research</a>
+
+  <article class="article">
+    <h1>The Variance of AI Safety, from Source Maps to Supply Chains</h1>
+    <p class="article-meta">April 4, 2026 &middot; 4 min read &middot; (originally published on <a href="https://medium.com/@oindree/the-variance-of-ai-safety-from-source-maps-to-supply-chains-b9e6a993abe5" target="_blank" rel="noopener">Medium</a>)</p>
+
+    <p class="article-dek">Lessons from the Anthropic Leak and the Mercor Breach, both of which occurred within the past week.</p>
+
+    <p>I&rsquo;ve spent a lot of time lately thinking about the relationship between AI safety and AI security. We often treat safety as the whole picture, but without security, safety guarantees fall apart. Looking at the Claude Code leak and the Mercor supply-chain breach, it&rsquo;s becoming clear that the biggest threat to &ldquo;safe&rdquo; AI today isn&rsquo;t just a rogue model, but rather a weak system.</p>
+
+    <h2>The Claude Code Leak</h2>
+
+    <p>The Anthropic leak is a good example of how a small technical mistake can turn into a real security issue. Claude Code source code was recently exposed through an npm packaging error involving a source map, revealing roughly 512,000 lines of unobfuscated TypeScript across about 1,900 files.</p>
+
+    <p>I learned that this incident isn&rsquo;t simply a secret-loss issue, but it&rsquo;s a roadmap. When attackers can see the orchestration logic, permissions, build details, and execution paths, they can study the system for weak points. They do not need to guess how the agent is pieced together, but can directly inspect it. This matters especially in AI systems, because if an attacker learns how the agent handles tools, permissions, and hidden behaviors, what is stopping them from looking for ways to bypass guardrails or exploit assumptions in the workflow? The code leak becomes a guide for attack surface discovery.</p>
+
+    <p>More surprising to me: the leak itself became bait. Zscaler reported that a fake &ldquo;Claude Code leak&rdquo; repository was used to distribute malware, including Vidar and GhostSocks. That means the incident did not stop at exposing internal code. It also created a new trust signal that attackers could weaponize.</p>
+
+    <h2>The Mercor Breach</h2>
+
+    <p>In this case, the issue was tied to LiteLLM, a popular gateway used to manage access to multiple AI models. Attackers compromised a separate tool in the pipeline to get publishing access, then pushed two poisoned versions of LiteLLM to PyPI. The malicious packages were live for less than an hour, but LiteLLM is downloaded millions of times a day, and thousands of companies were hit, one of them being Mercor.</p>
+
+    <p>What I learned from this breach is that many AI companies are dependent on middleware they do not fully control. That is convenient for shipping fast, but it also creates a dangerous concentration point. Mercor is a useful example because it shows how a startup can be affected even if the core model itself isn&rsquo;t the problem. Because Mercor&rsquo;s clients include Meta and OpenAI, the breach is a reminder that supply chain risk flows upward&mdash;a compromised middleware layer doesn&rsquo;t just hurt the startup, it touches everyone connected to it. The vulnerability was not in the foundation model, but it was in the system used to connect the model to the product.</p>
+
+    <p>This made me realize that open-source infrastructure introduces a shared-trust problem. Once a tool like LiteLLM becomes a common dependency, it also becomes an attractive target. If that middle layer is poisoned, every company built on top of it inherits the risk.</p>
+
+    <h2>What these leaks say about AI safety</h2>
+
+    <p>The Anthropic leak and the Mercor breach illustrate that AI safety is layered. A useful way to think about it is as an onion. At the center is the model itself. Around that is the harness&mdash;the code that controls how the model behaves, what tools it can use, and how it is deployed. The outer layer is the broader supply chain: external packages, gateways, vendor integrations, and other third-party infrastructure.</p>
+
+    <p>The Claude leak hit the inner layer by exposing internal implementation details. The Mercor breach hit an outer layer by compromising a shared dependency. Different attack paths, yet same lesson. The entire system has to be secure for the AI product to be safe.</p>
+
+    <p>These recent incidents have revealed that the AI safety conversation needs to broaden beyond alignment, robustness, and misuse. Because in the short term, a lot of the real-world risk comes from much more basic security failures. Exposed source code, compromised dependencies, leaked credentials, and weak operational controls create a more pressing security issue in the present.</p>
+
+    <p>The idea that AI safety is only about model behavior is too narrow. In practice, safety starts with the surrounding infrastructure. If the harness is exposed, or the supply chain is compromised, the model&rsquo;s behavior is no longer the only thing that matters.</p>
+
+    <p>These two incidents have honestly changed how I view the scope of AI safety. I used to think of it mostly as a math and ethics problem (making sure a model is aligned and won&rsquo;t go rogue!). But looking at these cases, I&rsquo;m realizing that safety is also a more practical, daily struggle with security.</p>
+  </article>
+</main>
+
+<footer class="site-footer">
+  <div class="wave" aria-hidden="true">
+    <svg viewBox="0 0 600 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 30 C 150 60, 450 0, 600 30 L 600 60 L 0 60 Z" fill="#f7d9e2"/>
+    </svg>
+  </div>
+  <p>&copy; <span id="year"></span> Oindree Chatterjee</p>
+</footer>
+
+<script src="../js/script.js"></script>
+</body>
+</html>

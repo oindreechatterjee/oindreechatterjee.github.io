@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reward Hacking in CS Education &mdash; Oindree Chatterjee</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Special+Elite&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a class="brand" href="../index.html">Oindree Chatterjee</a>
+  <nav class="tabs" aria-label="Primary">
+    <a class="tab-link" href="../index.html#home">Home</a>
+    <a class="tab-link active" href="../index.html#research">Research</a>
+    <a class="tab-link" href="../index.html#photography">Photography</a>
+    <a class="tab-link" href="../index.html#projects">Projects</a>
+  </nav>
+</header>
+
+<main class="article-wrap">
+  <a class="back-link" href="../index.html#research">&larr; Back to research</a>
+
+  <article class="article">
+    <h1>Reward Hacking in CS Education</h1>
+    <p class="article-meta">March 8, 2026 &middot; 5 min read &middot; (originally published on <a href="https://medium.com/@oindree/reward-hacking-in-cs-education-e93b6bdede25" target="_blank" rel="noopener">Medium</a>)</p>
+
+    <p>Reward hacking is what happens when an AI system follows the letter of the law but ignores the spirit. It&rsquo;s an RL agent finding a glitch to get infinite points instead of actually playing the game; it&rsquo;s optimizing for a proxy metric while the real goal(s) get left behind. In recent research, Anthropic has shown this happens even in advanced coding models, where an AI might find a loophole to pass a test suite without actually solving the logic.</p>
+
+    <p>I&rsquo;ve been sitting with this concept lately, specifically how it applies to the CS education space. A talk I attended recently by a Google UX researcher finally made the connection click: in the age of GenAI, the &ldquo;reward&rdquo; is the grade, and we are all at risk of hacking it (and nobody would call that a win!).</p>
+
+    <p>The talk was called &ldquo;Google&rsquo;s Approach to AI Tools for Software Engineers,&rdquo; given by Dr. Jamie Benario at SIGCSE TS 2026. Benario walked us through how Google thinks about deploying AI tools internally&mdash;both for coding tasks (code assistance, bug fixing, migration, testing) and non-coding ones (email writing, document drafting, performance reviews). She also talked about how Google actually trains its software engineers to use these tools: through workshops, orientation, empowering team leads, and building always-available resources.</p>
+
+    <p>What struck me wasn&rsquo;t the tool list, but rather the measurement infrastructure underneath it all.</p>
+
+    <p>Benario described a framework: 75 tasks that align with 12 work-related goals of developers working at the cutting edge of AI-powered tooling. There&rsquo;s also ongoing research into understanding the sentiment of how Googlers actually feel about AI adoption. That&rsquo;s a lot of scaffolding dedicated to understanding whether AI is working. But working how, exactly? Measured how?</p>
+
+    <p>If you&rsquo;re Google, your metrics that define &ldquo;successful AI adoption&rdquo; may include elements like task completion speed, code quality scores, reduction in bug reports, or even survey responses about satisfaction.</p>
+
+    <p>These may be reasonable to measure in a corporate context. For instance, if a developer ships better code faster because they leaned heavily on Gemini Code Assist, the outcome is genuinely good. Reward hacking isn&rsquo;t really a concern when the proxy and the goal are well-aligned.</p>
+
+    <p>But in the education space, the proxy and the goal can come apart fast.</p>
+
+    <p>Benario touched on this directly, citing a UC Berkeley study and referencing findings from CS education researchers: generative AI tends to be more useful for students who are already experienced, and could be actively harmful for novice programmers. The paper she mentioned&mdash;&ldquo;The Widening Gap: Benefits and Harms of Generative AI for Novice Programmers&rdquo;&mdash;captures this tension perfectly. A novice student using AI to complete assignments might produce output that looks correct. Their grade (the benchmark) goes up. But their actual understanding? That&rsquo;s harder to measure, and it may not be going up at all.</p>
+
+    <p>That&rsquo;s reward hacking. Not by the AI, but by the student, often unintentionally. They&rsquo;re optimizing for the grade, the visible metric, while the thing we actually care about (building foundational understanding) gets left out.</p>
+
+    <p>At this point, Benario made a statement that further got me thinking.</p>
+
+    <blockquote>&ldquo;Feelings of over-reliance may actually positively influence student metacognition.&rdquo;</blockquote>
+
+    <p>Most people assume over-reliance on AI is straightforwardly bad. But the Berkeley study suggests something more interesting: when students feel like they&rsquo;re leaning on AI too much, that uncomfortable feeling actually makes them think more carefully about their own learning. Am I actually understanding this, or am I just regurgitating what the AI says? The discomfort becomes productive.</p>
+
+    <p>This creates a weird problem for anyone trying to measure whether AI is working in education. If you&rsquo;re a teacher or researcher, the metrics you&rsquo;d naturally reach for are whether the student finished the assignment, how much they used the AI, or whether their output was correct. But none of those capture what actually matters&mdash;whether the student is genuinely learning and developing as a thinker.</p>
+
+    <p>And if the feeling of over-reliance is what&rsquo;s triggering that self-reflection, then &ldquo;reliance&rdquo; is actually a terrible thing to optimize against. You could design a whole intervention to reduce AI dependence, measure success by lower usage rates, and accidentally eliminate the exact discomfort that was making students more self-aware of their learning.</p>
+
+    <p>That&rsquo;s the reward hacking problem in full force. We hit the metric, but we lost the point.</p>
+
+    <p>Benario ended with two lasting questions I want to leave here, because I don&rsquo;t think they have clean answers:</p>
+
+    <ol>
+      <li>Is reliance always a bad thing? Is student perception of reliance a valuable measure when evaluating the success of a GenAI intervention?</li>
+      <li>Both industry and education suggest that experience is required to be a good user of generative AI. So how do we support learners in building that experience, while those tools are already available to them?</li>
+    </ol>
+
+    <p>The second question hits hardest for me personally. As a UC Berkeley EECS student who also does research in the CS education space, I&rsquo;m living in this tension. I use AI tools. My peers use AI tools. The students I think about in my research use AI tools. We&rsquo;re all already past the point of &ldquo;should we introduce this?&rdquo; The question is how you build real competence in an environment where the shortcut is always one tab away. Personally, it comes down to the student&rsquo;s thirst for learning. But for those who need more structure, redesigning how we measure success may help: oral exams, handwritten work, or assignments that build on AI output rather than just produce it. Exploring AI-driven metacognitive tools could be insightful as well (ways to use AI to actually force that productive discomfort rather than just going back to pen and paper methods).</p>
+
+    <p>If we&rsquo;re limiting measuring success to task completion and grades, we may never notice when we&rsquo;ve &ldquo;reward hacked&rdquo; our way to the wrong outcome.</p>
+
+    <p class="article-note">Notes from Dr. Jamie Benario&rsquo;s talk &ldquo;Google&rsquo;s Approach to AI Tools for Software Engineers&rdquo; informed this post. Any mistakes in how I&rsquo;ve represented the research are my own errors :)</p>
+  </article>
+</main>
+
+<footer class="site-footer">
+  <div class="wave" aria-hidden="true">
+    <svg viewBox="0 0 600 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 30 C 150 60, 450 0, 600 30 L 600 60 L 0 60 Z" fill="#f7d9e2"/>
+    </svg>
+  </div>
+  <p>&copy; <span id="year"></span> Oindree Chatterjee</p>
+</footer>
+
+<script src="../js/script.js"></script>
+</body>
+</html>
