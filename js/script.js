@@ -32,12 +32,10 @@ if (document.getElementById(initial)) {
   activateTab(initial, false);
 }
 
-/* email badge — address assembled at runtime to stay out of static HTML */
-const emailBadge = document.getElementById('email-badge');
-if (emailBadge) {
-  const addr = ['oindree', 'berkeley.edu'].join('@');
-  emailBadge.href = 'mailto:' + addr;
-}
+/* email links — address assembled at runtime to stay out of static HTML */
+document.querySelectorAll('#email-badge, .email-link').forEach(el => {
+  el.href = 'mailto:' + ['oindree', 'berkeley.edu'].join('@');
+});
 
 /* expandable publication abstracts */
 document.querySelectorAll('.abstract-toggle').forEach(btn => {

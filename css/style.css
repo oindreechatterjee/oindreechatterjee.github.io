@@ -6,7 +6,7 @@
   --pink-mid: #f2a7bd;
   --pink-deep: #d97ea0;
   --text-dark: #6b3a4d;
-  --text-soft: #93677a;
+  --text-soft: #7e5568;
   --peach: #fbe2c8;
   --green: #bcd8b0;
 
@@ -330,6 +330,14 @@ a.scallop-badge:hover {
   color: var(--text-soft);
   margin-bottom: 2.5rem;
 }
+
+.section-sub a {
+  color: var(--pink-deep);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.section-sub a:hover { text-decoration: underline; }
 
 /* research subsections */
 .subsection-title {
@@ -885,3 +893,20 @@ a.tab-link { text-decoration: none; display: inline-block; }
   color: var(--text-soft);
   font-size: 0.85rem;
 }
+
+.site-footer p.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.75rem;
+  padding: 1.5rem 0 0.25rem;
+}
+
+.footer-links a {
+  color: var(--pink-deep);
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.footer-links a:hover { text-decoration: underline; }
