@@ -1,13 +1,19 @@
 const tabLinks = document.querySelectorAll('[data-tab-link]');
 const panels = document.querySelectorAll('.tab-panel');
 
+/* panel id -> url hash, for panels whose display name differs from their id */
+const HASH_ALIASES = { photography: 'vsco' };
+const REVERSE_ALIASES = Object.fromEntries(Object.entries(HASH_ALIASES).map(([k, v]) => [v, k]));
+const hashFor = name => HASH_ALIASES[name] || name;
+const nameFor = hash => REVERSE_ALIASES[hash] || hash;
+
 function activateTab(name, updateHash = true) {
   panels.forEach(panel => panel.classList.toggle('active', panel.id === name));
   document.querySelectorAll('.tab-link').forEach(link => {
     link.classList.toggle('active', link.dataset.tabLink === name);
   });
   if (updateHash) {
-    history.pushState(null, '', `#${name}`);
+    history.pushState(null, '', `#${hashFor(name)}`);
   }
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
@@ -23,11 +29,11 @@ const yearEl = document.getElementById('year');
 if (yearEl) yearEl.textContent = new Date().getFullYear();
 
 window.addEventListener('popstate', () => {
-  const name = location.hash.replace('#', '') || 'home';
+  const name = nameFor(location.hash.replace('#', '')) || 'home';
   activateTab(name, false);
 });
 
-const initial = location.hash.replace('#', '') || 'home';
+const initial = nameFor(location.hash.replace('#', '')) || 'home';
 if (document.getElementById(initial)) {
   activateTab(initial, false);
 }
