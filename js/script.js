@@ -27,12 +27,13 @@ const FLOWER_COLORS = [
   { petal: '#d97ea0', center: '#fbe4e6' },
   { petal: '#bcd8b0', center: '#fbe2c8' }
 ];
-const MAX_FLOWERS = 18;
-
-/* even placement: shuffled grid cells, refilled when exhausted */
-const GRID_COLS = 6;
+/* even placement: shuffled grid cells, refilled when exhausted.
+   Fewer columns on narrow screens so cells stay wider than a flower. */
+const GRID_COLS = window.innerWidth < 640 ? 3 : 6;
 const GRID_ROWS = 3;
+const MAX_FLOWERS = GRID_COLS * GRID_ROWS;
 let cellQueue = [];
+const cellOccupants = new Map();
 
 function nextCell() {
   if (cellQueue.length === 0) {
@@ -59,11 +60,17 @@ function spawnFlower() {
     </g>`;
   }
 
+  const cell = nextCell();
+
+  // a reshuffled cell can repeat before its previous flower has faded out —
+  // clear it immediately so two blooms never sit in the same spot
+  const previousOccupant = cellOccupants.get(cell);
+  if (previousOccupant) previousOccupant.remove();
+
   const flower = document.createElement('div');
   flower.className = 'bloom-flower';
   flower.style.width = `${size}px`;
   flower.style.height = `${size}px`;
-  const cell = nextCell();
   const col = cell % GRID_COLS;
   const row = Math.floor(cell / GRID_COLS);
   const cellW = 100 / GRID_COLS;
@@ -77,6 +84,7 @@ function spawnFlower() {
   </svg>`;
 
   bloomLayer.appendChild(flower);
+  cellOccupants.set(cell, flower);
 
   if (bloomLayer.children.length > MAX_FLOWERS) {
     const oldest = bloomLayer.querySelector('.bloom-flower:not(.fade-out)');
