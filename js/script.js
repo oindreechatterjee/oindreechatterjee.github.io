@@ -27,26 +27,22 @@ const FLOWER_COLORS = [
   { petal: '#d97ea0', center: '#fbe4e6' },
   { petal: '#bcd8b0', center: '#fbe2c8' }
 ];
-/* even placement: shuffled grid cells, refilled when exhausted.
+/* even placement: shuffle every grid cell once, hand them out one at a time,
+   and stop once they run out. Each cell is used exactly once per page visit,
+   so flowers never overlap and — once placed — never get replaced or removed.
    Fewer columns on narrow screens so cells stay wider than a flower. */
 const GRID_COLS = window.innerWidth < 640 ? 3 : 6;
 const GRID_ROWS = 3;
-const MAX_FLOWERS = GRID_COLS * GRID_ROWS;
-let cellQueue = [];
-const cellOccupants = new Map();
-
-function nextCell() {
-  if (cellQueue.length === 0) {
-    cellQueue = Array.from({ length: GRID_COLS * GRID_ROWS }, (_, i) => i);
-    for (let i = cellQueue.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [cellQueue[i], cellQueue[j]] = [cellQueue[j], cellQueue[i]];
-    }
-  }
-  return cellQueue.pop();
+const cellQueue = Array.from({ length: GRID_COLS * GRID_ROWS }, (_, i) => i);
+for (let i = cellQueue.length - 1; i > 0; i--) {
+  const j = Math.floor(Math.random() * (i + 1));
+  [cellQueue[i], cellQueue[j]] = [cellQueue[j], cellQueue[i]];
 }
 
 function spawnFlower() {
+  if (cellQueue.length === 0) return; // grid is full — leave existing flowers alone
+  const cell = cellQueue.pop();
+
   const { petal, center } = FLOWER_COLORS[Math.floor(Math.random() * FLOWER_COLORS.length)];
   const size = 26 + Math.random() * 44;
   const petalCount = Math.random() < 0.5 ? 5 : 6;
@@ -59,13 +55,6 @@ function spawnFlower() {
       <ellipse cx="0" cy="-13" rx="6.5" ry="13" fill="${petal}"/>
     </g>`;
   }
-
-  const cell = nextCell();
-
-  // a reshuffled cell can repeat before its previous flower has faded out —
-  // clear it immediately so two blooms never sit in the same spot
-  const previousOccupant = cellOccupants.get(cell);
-  if (previousOccupant) previousOccupant.remove();
 
   const flower = document.createElement('div');
   flower.className = 'bloom-flower';
@@ -84,15 +73,6 @@ function spawnFlower() {
   </svg>`;
 
   bloomLayer.appendChild(flower);
-  cellOccupants.set(cell, flower);
-
-  if (bloomLayer.children.length > MAX_FLOWERS) {
-    const oldest = bloomLayer.querySelector('.bloom-flower:not(.fade-out)');
-    if (oldest) {
-      oldest.classList.add('fade-out');
-      setTimeout(() => oldest.remove(), 2100);
-    }
-  }
 }
 
 for (let i = 0; i < 8; i++) {

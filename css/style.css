@@ -82,11 +82,6 @@ body {
   to { opacity: 1; }
 }
 
-.bloom-flower.fade-out {
-  transition: opacity 2s ease;
-  opacity: 0 !important;
-}
-
 @media (prefers-reduced-motion: reduce) {
   .bloom-flower,
   .bloom-flower .petal,
