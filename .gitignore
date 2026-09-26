@@ -6,3 +6,7 @@
 
 # unused original (site uses the compressed .jpg)
 assets/oindree_headshot.png
+
+# jekyll build output
+_site/
+.jekyll-cache/
