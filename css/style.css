@@ -438,6 +438,8 @@ a.scallop-badge:hover {
   overflow: hidden;
 }
 
+.card-abstract.collapsed p + p { display: none; }
+
 .abstract-toggle {
   font-family: var(--font-body);
   font-weight: 700;
@@ -508,10 +510,9 @@ a.scallop-badge:hover {
 .card-link:hover { text-decoration: underline; }
 
 .card-link-soon {
-  color: var(--text-soft);
-  font-style: italic;
   cursor: default;
 }
+.card-link-soon:hover { text-decoration: none; }
 
 .card-links {
   grid-area: link;
